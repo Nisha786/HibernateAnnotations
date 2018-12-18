@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hbm2ddl.auto">create</property>
+		<property name="show_sql">true</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/MumbaiAirport</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">papa#786</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+    	<mapping class="com.mumbaiAirport.HotelsDTO"></mapping>
+		<mapping class="com.mumbaiAirport.CarRentalDTO"></mapping>  
+		<mapping class="com.mumbaiAirport.Terminal2DTO"></mapping>
+		<mapping class="com.mumbaiAirport.Terminal1DTO"></mapping> 
+		<mapping class="com.mumbaiAirport.TransportDTO"></mapping>
+		<mapping class="com.mumbaiAirport.ParkingDTO"></mapping>
+        <mapping class="com.mumbaiAirport.DepartureDTO"></mapping>
+		<mapping class="com.mumbaiAirport.ArrivalsDTO"></mapping>
+		 <mapping class="com.mumbaiAirport.LoungesDTO"></mapping>
+		
+	</session-factory>
+</hibernate-configuration>

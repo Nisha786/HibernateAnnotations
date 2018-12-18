@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+<type-mapping>
+	<sql-type jdbc-type="VARCHAR" hibernate-type="string"></sql-type>
+	<sql-type jdbc-type="VARCHAR" hibernate-type="string"></sql-type>
+</type-mapping>
+
+<table-filter match-catalog="test" match-name="department" />
+	<table-filter match-catalog="test" match-name="employee" />
+	<table-filter match-catalog="test" match-name="product" />
+	<table-filter match-name="house" match-catalog="test"></table-filter>
+	<table-filter match-name="owner" match-catalog="test"></table-filter>
+	<table catalog="test" name="house">
+		<column name="id"></column>
+		<column name="name"></column>
+	</table>
+	<table catalog="test" name="owner">
+		<column name="id"></column>
+		<column name="name"></column>
+		<column name="houserent"></column>
+		<column name="houseid"></column>
+	</table>
+</hibernate-reverse-engineering>

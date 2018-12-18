@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Sep 14, 2018 12:08:50 PM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="manytoone" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.reverseHibernate.Electroniccomponent" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="electroniccomponent">
+        <id name="eid" type="int">
+            <column name="Eid"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="ename" optimistic-lock="true" type="string" unique="false">
+            <column length="25" name="Ename"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Sep 14, 2018 12:41:13 PM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="test" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.reverseHibernate.Department" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="department">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="com.reverseHibernate.Employee" embed-xml="true" fetch="select" insert="true" name="employee" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="employeeid"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="string" unique="false">
+            <column length="25" name="name"/>
+        </property>
+    </class>
+</hibernate-mapping>

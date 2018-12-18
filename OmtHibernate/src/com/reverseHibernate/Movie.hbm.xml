@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Sep 14, 2018 12:08:50 PM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="manytoone" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.reverseHibernate.Movie" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="movie">
+        <id name="movieId" type="int">
+            <column name="MovieId"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="com.reverseHibernate.Director" embed-xml="true" fetch="select" insert="true" name="directorByForevenId" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="forevenId"/>
+        </many-to-one>
+        <many-to-one class="com.reverseHibernate.Director" embed-xml="true" fetch="select" insert="true" name="directorByPersonDummy" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="PersonDummy"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="movieName" optimistic-lock="true" type="string" unique="false">
+            <column length="25" name="MovieName"/>
+        </property>
+    </class>
+</hibernate-mapping>

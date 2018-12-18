@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Sep 14, 2018 12:08:50 PM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="manytoone" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.reverseHibernate.Owner" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="owner">
+        <id name="ownerId" type="int">
+            <column name="OwnerId"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="ownerName" optimistic-lock="true" type="string" unique="false">
+            <column length="25" name="OwnerName"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="carsForOwnerDummy" optimistic-lock="true" sort="unsorted" table="car">
+            <key on-delete="noaction">
+                <column name="OwnerDummy"/>
+            </key>
+            <one-to-many class="com.reverseHibernate.Car" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="carsForForevenId" optimistic-lock="true" sort="unsorted" table="car">
+            <key on-delete="noaction">
+                <column name="forevenId"/>
+            </key>
+            <one-to-many class="com.reverseHibernate.Car" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

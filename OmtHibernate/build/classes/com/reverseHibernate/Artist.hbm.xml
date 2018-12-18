@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Sep 14, 2018 12:08:50 PM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="manytoone" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.reverseHibernate.Artist" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="artist">
+        <id name="artistId" type="int">
+            <column name="ArtistId"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="artistName" optimistic-lock="true" type="string" unique="false">
+            <column length="25" name="ArtistName"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="songsForPersonDummy" optimistic-lock="true" sort="unsorted" table="song">
+            <key on-delete="noaction">
+                <column name="PersonDummy"/>
+            </key>
+            <one-to-many class="com.reverseHibernate.Song" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="songsForForevenId" optimistic-lock="true" sort="unsorted" table="song">
+            <key on-delete="noaction">
+                <column name="forevenId"/>
+            </key>
+            <one-to-many class="com.reverseHibernate.Song" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

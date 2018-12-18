@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Sep 14, 2018 12:41:13 PM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="test" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.reverseHibernate.Employee" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="employee">
+        <id name="id" type="int">
+            <column name="ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="firstname" optimistic-lock="true" type="string" unique="false">
+            <column name="FIRSTNAME"/>
+        </property>
+        <property generated="never" lazy="false" name="lastname" optimistic-lock="true" type="string" unique="false">
+            <column name="LASTNAME"/>
+        </property>
+        <property generated="never" lazy="false" name="salary" optimistic-lock="true" type="double" unique="false">
+            <column name="Salary" not-null="true" precision="22" scale="0"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="departments" optimistic-lock="true" sort="unsorted" table="department">
+            <key on-delete="noaction">
+                <column name="employeeid"/>
+            </key>
+            <one-to-many class="com.reverseHibernate.Department" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

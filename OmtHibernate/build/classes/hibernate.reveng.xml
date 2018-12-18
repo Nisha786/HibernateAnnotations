@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="manytoone" match-name="artist"/>
+  <table-filter match-catalog="manytoone" match-name="car"/>
+  <table-filter match-catalog="manytoone" match-name="class"/>
+  <table-filter match-catalog="manytoone" match-name="course"/>
+  <table-filter match-catalog="manytoone" match-name="department"/>
+  <table-filter match-catalog="manytoone" match-name="director"/>
+  <table-filter match-catalog="manytoone" match-name="electroniccomponent"/>
+  <table-filter match-catalog="manytoone" match-name="lecture"/>
+  <table-filter match-catalog="manytoone" match-name="medication"/>
+  <table-filter match-catalog="manytoone" match-name="movie"/>
+  <table-filter match-catalog="manytoone" match-name="owner"/>
+  <table-filter match-catalog="manytoone" match-name="person"/>
+  <table-filter match-catalog="manytoone" match-name="professor"/>
+  <table-filter match-catalog="manytoone" match-name="project"/>
+  <table-filter match-catalog="manytoone" match-name="song"/>
+  <table-filter match-catalog="manytoone" match-name="stakeholder"/>
+  <table-filter match-catalog="manytoone" match-name="student"/>
+  <table-filter match-catalog="manytoone" match-name="switch"/>
+</hibernate-reverse-engineering>

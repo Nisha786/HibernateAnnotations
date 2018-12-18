@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Sep 14, 2018 12:08:50 PM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="manytoone" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.reverseHibernate.Song" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="song">
+        <id name="songId" type="int">
+            <column name="SongId"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="com.reverseHibernate.Artist" embed-xml="true" fetch="select" insert="true" name="artistByPersonDummy" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="PersonDummy"/>
+        </many-to-one>
+        <many-to-one class="com.reverseHibernate.Artist" embed-xml="true" fetch="select" insert="true" name="artistByForevenId" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="forevenId"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="songName" optimistic-lock="true" type="string" unique="false">
+            <column length="25" name="SongName"/>
+        </property>
+    </class>
+</hibernate-mapping>

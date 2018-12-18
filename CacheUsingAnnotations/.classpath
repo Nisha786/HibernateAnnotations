@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/HibernateAnnotations"/>
+	<classpathentry kind="lib" path="C:/Program Files/Hibernate Jar/hibernate-distribution-3.6.10.Final/jar_files/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Hibernate Jar/hibernate-distribution-3.6.10.Final/jar_files/backport-util-concurrent-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Hibernate Jar/hibernate-distribution-3.6.10.Final/jar_files/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Hibernate Jar/hibernate-distribution-3.6.10.Final/jar_files/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Hibernate Jar/hibernate-distribution-3.6.10.Final/jar_files/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Hibernate Jar/hibernate-distribution-3.6.10.Final/jar_files/ehcache-1.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Hibernate Jar/hibernate-distribution-3.6.10.Final/jar_files/hibernate-core-3.5.1-Final.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Hibernate Jar/hibernate-distribution-3.6.10.Final/jar_files/hibernate-ehcache-3.5.1-Final.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Hibernate Jar/hibernate-distribution-3.6.10.Final/jar_files/jsr107cache-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Hibernate Jar/hibernate-distribution-3.6.10.Final/jar_files/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Hibernate Jar/hibernate-distribution-3.6.10.Final/jar_files/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Hibernate Jar/hibernate-distribution-3.6.10.Final/jar_files/xml-apis-1.0.b2.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

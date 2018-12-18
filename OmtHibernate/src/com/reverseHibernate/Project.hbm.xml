@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Sep 14, 2018 12:08:50 PM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="manytoone" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.reverseHibernate.Project" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="project">
+        <id name="projectId" type="int">
+            <column name="ProjectId"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="contactName" optimistic-lock="true" type="string" unique="false">
+            <column length="11" name="ContactName"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="stakeholders" optimistic-lock="true" sort="unsorted" table="stakeholder">
+            <key on-delete="noaction">
+                <column name="ProjectDummy"/>
+            </key>
+            <one-to-many class="com.reverseHibernate.Stakeholder" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>
